@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "l5_app/base.html" %}
+{% load staticfiles %}
+    {% block body_block %}
+        <div class="jumbotron">
+            {% if registered %}
+                <h1>Thanks for registering</h1>
+            {% else %}
+                <h2>Register below :-</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{user_form.as_p}}
+                    {{profile_form.as_p}}
+                    <input type="submit" class="btn btn-primary" value="Register!!!">
+                </form>
+            {% endif %}
+        </div>
+    {% endblock %}
