@@ -3,6 +3,8 @@ from l5_app.forms import UserForm,UserProfileInfoForm
 
 #using django built in functionality for logins,
 
+#commit 2
+
 from django.urls import reverse
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth import authenticate,login,logout
